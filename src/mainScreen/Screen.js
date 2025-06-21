@@ -9,16 +9,14 @@ import {
 import Button from '../components/Button';
 import { moderateScale } from '../styles/size';
 import { useTheme } from '../context/ThemeContext';
+import FlatListSlider from 'react-native-flatlist-slider';
 import colorSchemes from '../styles/colorSchemes';
+import Card from '../components/Card';
 
 
 const Screen = () => {
   const { mode, theme, toggleMode, changeTheme } = useTheme();
-  
-  // Get current colors
   const { background } = colorSchemes[mode][theme];
-  
-  // Determine status bar style
   const statusBarStyle = mode === 'dark' ? 'light-content' : 'dark-content';
   
   return (
@@ -28,18 +26,14 @@ const Screen = () => {
         backgroundColor={background}
       />
       
-      
-      {/* Button Container */}
       <View style={styles.buttonContainer}>
-        {/* Mode Button */}
         <Button
           type="modeButton"
           onPress={toggleMode}
         >
-          {mode}
+            {mode}
         </Button>
         
-        {/* Theme Button */}
         <Button
           type="themeButton"
           onPress={changeTheme}
@@ -47,13 +41,14 @@ const Screen = () => {
             {theme}
         </Button>
       </View>
-      
-      
-      {/* <View style={styles.themeIndicator}>
-        <Text style={[styles.themeText, { color: textColor }]}>
-          {theme.toUpperCase()}
-        </Text>
-      </View> */}
+    <View style={styles.cardContainer}>
+        <Card
+            title="Cool guy"
+            summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna orci, blandit eu ante nec, sodales vehicula nisi. Mauris vel nibh imperdiet, tempus lectus ac, faucibus quam. Praesent euismod congue cursus. Phasellus tincidunt sem vitae neque egestas, ut egestas justo venenatis."
+            >
+        </Card>
+    </View>
+
     </SafeAreaView>
   );
 };
@@ -63,7 +58,8 @@ export default Screen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: moderateScale(20),
+    paddingHorizontal: moderateScale(15),
+    paddingVertical: moderateScale(50),
     justifyContent: 'center',
   },
   header: {
@@ -86,4 +82,8 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(16),
     fontWeight: 'bold',
   },
+  cardContainer: {
+    flex: 1,
+    alignItems: 'center',
+  }
 });
