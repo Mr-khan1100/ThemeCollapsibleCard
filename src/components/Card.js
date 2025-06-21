@@ -13,7 +13,6 @@ import colorSchemes from '../styles/colorSchemes';
 
 export default function Card({ title, summary }) {
   const { mode, theme } = useTheme();
-  console.log('Card rendered with mode:', mode, 'and theme:', theme);
   const colors = colorSchemes[mode][theme];
   const [open, setOpen] = useState(false);
   const anim = useRef(new Animated.Value(0)).current;
@@ -66,7 +65,6 @@ export default function Card({ title, summary }) {
           <View style={[styles.swatch, { backgroundColor: colors.themeButton.default.bg }]} />
           <View style={styles.textBlock}>
             <Text style={[styles.title, { color:  mode === 'Dark' ? '#fff' : '#000' }]}>{title}</Text>
-            {/* <Text style={[styles.summary, { color: colors.themeButton.default.text }]}>{summary}</Text> */}
              <Text
               style={[styles.summary, { color:  mode === 'Dark' ? '#fff' : '#000' }]}
               numberOfLines={open ? undefined : 4}
@@ -106,8 +104,29 @@ export default function Card({ title, summary }) {
                   >
                     {it.name}
                   </Text>
-                  <Text style={{ color:  mode === 'Dark' ? '#fff' : '#000', fontSize: moderateScale(14), fontWeight: '400' }}>
+                  {/* <Text style={{ color:  mode === 'Dark' ? '#fff' : '#000', fontSize: moderateScale(14), fontWeight: '400' }}>
                     {it.mention ? `${it.mention} ${it.text}` : it.text}
+                  </Text> */}
+                  <Text style={{ color: mode === 'Dark' ? '#fff' : '#000', fontSize: moderateScale(14) }}>
+                    {it.mention ? (
+                      <>
+                        <Text
+                          style={{
+                            color: '#007AFF',             // iOS-style link blue; pick your own
+                            fontWeight: '700',
+                            textDecorationLine: 'underline',
+                          }}
+                        >
+                          {it.mention}
+                        </Text>
+                        <Text> </Text>{/* space between mention & text */}
+                        <Text style={{ fontWeight: '400' }}>
+                          {it.text}
+                        </Text>
+                      </>
+                    ) : (
+                      it.text
+                    )}
                   </Text>
 
                   {/* combined shapes container */}

@@ -44,8 +44,7 @@ const Screen = () => {
         <Card
             title="Cool guy"
             summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna orci, blandit eu ante nec, sodales vehicula nisi. Mauris vel nibh imperdiet, tempus lectus ac, faucibus quam. Praesent euismod congue cursus. Phasellus tincidunt sem vitae neque egestas, ut egestas justo venenatis."
-            >
-        </Card>
+            />
     </View>
 
     </SafeAreaView>
