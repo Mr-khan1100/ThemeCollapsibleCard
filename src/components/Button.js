@@ -1,4 +1,3 @@
-// src/components/Button.js
 import React, { useState } from 'react';
 import { TouchableOpacity, Text } from 'react-native';
 import { moderateScale } from '../styles/size';

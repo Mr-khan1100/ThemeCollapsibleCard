@@ -1,4 +1,3 @@
-// Define all color schemes
 const colorSchemes = {
   Light: {
     Crimson: {

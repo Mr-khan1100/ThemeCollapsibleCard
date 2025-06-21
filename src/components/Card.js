@@ -1,4 +1,3 @@
-// src/components/ExpandableCard.js
 import React, { useState, useRef } from 'react';
 import {
   View,
@@ -8,7 +7,7 @@ import {
   StyleSheet,
   ScrollView,
 } from 'react-native';
-import { scale, moderateScale } from '../styles/size';
+import { scale, moderateScale, verticalScale } from '../styles/size';
 import { useTheme } from '../context/ThemeContext';
 import colorSchemes from '../styles/colorSchemes';
 
@@ -188,8 +187,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   swatch: {
-    width: scale(24),
-    height: scale(24),
+    width: scale(40),
+    height: scale(40),
     borderRadius: scale(8),
     marginRight: moderateScale(8),
   },
@@ -198,7 +197,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   summary: {
-    marginTop: moderateScale(6),
+    // marginTop: moderateScale(6),
     fontSize: moderateScale(14),
     fontWeight: '400',
   },
@@ -213,8 +212,8 @@ const styles = StyleSheet.create({
   },
   shapeWrapper: {
     flexDirection: 'row',
-    width: moderateScale(24),
-    height: moderateScale(24),
+    width: scale(24),
+    height: scale(24),
     backgroundColor: '#fff',
     borderRadius: moderateScale(8),
     justifyContent: 'center',
@@ -223,8 +222,8 @@ const styles = StyleSheet.create({
   },
 
   square: {
-    width: moderateScale(10),
-    height: moderateScale(10),
+    width: scale(12),
+    height: scale(12),
   },
   listContainer: {
     flex: 1,
@@ -247,8 +246,9 @@ const styles = StyleSheet.create({
     marginVertical: moderateScale(4),
   },
   toggleBtn: {
-    alignSelf: 'center',
-    marginTop: moderateScale(8),
+    alignSelf: 'stretch',
+    minwidth: '100%',
+    alignItems: 'center',
   },
   toggleText: {
     fontSize: moderateScale(12),

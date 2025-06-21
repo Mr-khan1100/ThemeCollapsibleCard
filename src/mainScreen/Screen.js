@@ -9,7 +9,6 @@ import {
 import Button from '../components/Button';
 import { moderateScale } from '../styles/size';
 import { useTheme } from '../context/ThemeContext';
-import FlatListSlider from 'react-native-flatlist-slider';
 import colorSchemes from '../styles/colorSchemes';
 import Card from '../components/Card';
 

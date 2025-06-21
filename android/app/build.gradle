@@ -76,7 +76,11 @@ android {
     ndkVersion rootProject.ext.ndkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
-
+    // externalNativeBuild {
+    //     cmake {
+    //         version "3.22.1"  // Add this line
+    //     }
+    // }
     namespace "com.themeanimation"
     defaultConfig {
         applicationId "com.themeanimation"

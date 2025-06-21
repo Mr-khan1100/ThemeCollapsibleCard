@@ -2,7 +2,7 @@ import { Dimensions } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
 
-// Guideline sizes based on standard 5" screen
+
 const guidelineBaseWidth = 350;
 const guidelineBaseHeight = 680;
 
