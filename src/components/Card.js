@@ -112,14 +112,14 @@ export default function Card({ title, summary }) {
                       <>
                         <Text
                           style={{
-                            color: '#007AFF',             // iOS-style link blue; pick your own
+                            color: '#007AFF',
                             fontWeight: '700',
                             textDecorationLine: 'underline',
                           }}
                         >
                           {it.mention}
                         </Text>
-                        <Text> </Text>{/* space between mention & text */}
+                        <Text> </Text>
                         <Text style={{ fontWeight: '400' }}>
                           {it.text}
                         </Text>
@@ -173,7 +173,6 @@ export default function Card({ title, summary }) {
 
       </ScrollView>
 
-      {/* Fixed footer: Open/Close */}
       <Pressable onPress={toggle} style={styles.toggleBtn}>
         <Text style={[styles.toggleText, { color:  mode === 'Dark' ? '#fff' : '#000' }]}>
           {open ? 'Close' : 'Open'}
