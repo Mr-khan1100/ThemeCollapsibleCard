@@ -1,5 +1,40 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+
+# 📱 React Native ThemeSwitcher App
+
+A customizable React Native app with support for **Dark/Light modes**, **multiple color themes**, **expandable cards**, and **mention highlighting** — with local persistence using `AsyncStorage`.
+
+---
+
+## 🚀 Features
+
+✅ Toggle between **Light** and **Dark** mode  
+✅ Switch between **Crimson**, **Aura**, and **Field** themes  
+✅ **Animated expandable card** with smooth height transitions  
+✅ Reuseable component which can be used in a list or called at different places/module.  
+✅ Context Api to easy excess of theme and colot state. 
+✅ Local persistence using **AsyncStorage**  
+
+---
+
+# Project Stucture
+native/
+├── src/
+│   ├── components/
+│   │   ├── Button.js
+│   │   └── Card.js
+│   ├── context/
+│   │   └── ThemeContext.js
+│   ├── mainScreen/
+│   │   └── Screen.js
+│   └── styles/
+│       ├── colorSchemes.js
+│       └── size.js
+├── App.js
+└── package.json
+
+
 # Getting Started
 
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
