@@ -9,9 +9,10 @@ A customizable React Native app with support for **Dark/Light modes**, **multipl
 
 ## 🚀 Features
 
-✅ Toggle between **Light** and **Dark** mode  
-✅ Switch between **Crimson**, **Aura**, and **Field** themes  
-✅ **Animated expandable card** with smooth height transitions  
+✅ Toggle between **Light** and **Dark** mode.
+✅ Switch between **Crimson**, **Aura**, and **Field** themes.
+✅ **Animated expandable card** with smooth height transitions.
+✅ For Animation used react-native Animate library. 
 ✅ Reuseable component which can be used in a list or called at different places/module.  
 ✅ Context Api to easy excess of theme and colot state. 
 ✅ Local persistence using **AsyncStorage**  
